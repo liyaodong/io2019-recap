@@ -6,7 +6,7 @@
 #+OPTIONS: timestamp:nil, toc:nil, reveal_title_slide:nil, num:nil
 #+REVEAL_TRANS: concave
 #+REVEAL_EXTRA_CSS: ./google_io.css
-#+EXPORT_FILE_NAME: ../docs/index.html
+#+EXPORT_FILE_NAME: ../docs/web-components.html
 
 * Web Components
   :PROPERTIES:
