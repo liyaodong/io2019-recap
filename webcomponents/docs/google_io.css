@@ -1,0 +1,41 @@
+body {
+    font-size: 16px;
+    line-height: 1.87;
+    -webkit-font-smoothing: antialiased;
+    color: #202124;
+    background-color: #FAFAFA;
+    font-family: "Google Sans",arial,sans-serif !important;
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+.reveal {
+    color: #202124;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: "Google Sans",arial,sans-serif !important;
+    text-transform: none;
+}
+
+.reveal h2 {
+    background-color: #4C71F5;
+    color: #fff;
+}
+
+.reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    color: #4C71F5;
+}
+
+img.company-logo {
+    height: 80px;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.company-logo.tw {
+    height: 50px;
+}

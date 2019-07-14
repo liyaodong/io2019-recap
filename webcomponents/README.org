@@ -1,0 +1,82 @@
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+TITLE: Google I/O Redux 2019
+#+Email: mail@liyaodong.com
+#+Date:
+#+Author:
+#+OPTIONS: timestamp:nil, toc:nil, reveal_title_slide:nil, num:nil
+#+REVEAL_TRANS: concave
+#+REVEAL_EXTRA_CSS: ./google_io.css
+#+EXPORT_FILE_NAME: docs/index.html
+
+* Web Components
+  :PROPERTIES:
+  :reveal_background: #ffffff
+  :END:
+  The Secret Ingredient Helping Power The Web
+  #+REVEAL_HTML: <img class="stretch" src="./hashtag.gif">
+** Google's mission
+  #+REVEAL_HTML: <blockquote>Organize the world’s information and make it universally accessible and useful.</blockquote>
+** TAGS
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/30/My Cloud.png">
+** Agenda
+- PWA Principles
+- AI/Web WebAssembly/Browser news
+* PWA
+  Progressive Web App
+** Principles
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/28/Screen Shot 2018-06-28 at 8.44.05 PM.png">
+
+* Fast
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.52.50 PM.png">
+** Why Fast
+  #+REVEAL_HTML: <blockquote>No matter what kind of experience I'm building, I want it to be fast</blockquote>
+** Why Fast
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/30/EVF0FPcx.gif">
+** How to Fast
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.53.07 PM.png">
+** How to Fast
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/Mv-l3-tJgGk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+** How to Fast
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/UvK9zAsSM8Q?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+** How to Fast
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/7_2CJs_VZk4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Integrated
+  #+REVEAL_HTML: <img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.56.03 PM.png">
+** Credential Management API
+  #+REVEAL_HTML: <video src="https://developers.google.com/web/fundamentals/security/credential-management/animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay="" muted="" loop="" controls=""></video>
+** What's new with sign up and sign in on the web
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/kGGMgEfSzMw?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+** Add to home screen API
+  #+REVEAL_HTML: <img src="https://image.liyaodong.com/2018/6/30/1530329685971.jpg">
+** Add to home screen API
+  #+REVEAL_HTML: <img src="https://developers.google.com/web/fundamentals/app-install-banners/images/add-to-home-screen.gif">
+** Add to home screen API
+  #+REVEAL_HTML: <img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.58.06 PM.png">
+** Web APK: Trusted Web Activities
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/TCgT8dzSiU8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Reliable
+  #+REVEAL_HTML: <img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 9.02.49 PM.png">
+** Service Worker
+  #+REVEAL_HTML: <img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.45.41 PM.png">
+** Offline support
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/DtuJ55tmjps" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Engaging
+  #+REVEAL_HTML: <img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 9.05.00 PM.png">
+** User experience
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/3VUMl_l-_fI?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* PWA for desktop
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/EiGDj9wSfb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+** PWA Desktop VS Electron/Node-Webkit
+* Chrome DevTools
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/mfuE53x4b3k?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* TensorFlow for JavaScript
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/OmofOvMApTU?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Headless Chrome
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/lhZOFUY1weo?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* WebAssembly
+  #+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/BnYq7JapeDA?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Summary
+  PWA/Service Worker/WebAssembly/Lighthouse/AMP
+#+REVEAL_HTML: <iframe width="854" height="480" src="https://www.youtube.com/embed/Ay-mdLMDtbs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Q&A
+* Thanks
