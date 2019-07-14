@@ -28,177 +28,210 @@
 <div class="slides">
 
 <section>
-<section id="slide-org7b4ca0e" data-background="#ffffff">
-<h2 id="org7b4ca0e">Web Components</h2>
+<section id="slide-org136a78b" data-background="#ffffff">
+<h2 id="org136a78b">Web Components</h2>
 <p>
 The Secret Ingredient Helping Power The Web
 </p>
 <img class="stretch" src="./hashtag.gif">
 </section>
-<section id="slide-org5bd109a">
-<h3 id="org5bd109a">Google's mission</h3>
-<blockquote>Organize the world’s information and make it universally accessible and useful.</blockquote>
-</section>
-<section id="slide-org6b7cb31">
-<h3 id="org6b7cb31">TAGS</h3>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/30/My Cloud.png">
-</section>
-<section id="slide-org0a2402e">
-<h3 id="org0a2402e">Agenda</h3>
+<section id="slide-org97d85e8">
+<h3 id="org97d85e8">Outline</h3>
 <ul>
-<li>PWA Principles</li>
-<li>AI/Web WebAssembly/Browser news</li>
+<li>Current state of web components</li>
+<li>What's driving adoption(pros-cons compare)</li>
+<li>How to get started</li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-orgfd38a8d">
-<h2 id="orgfd38a8d">PWA</h2>
-<p>
-Progressive Web App
-</p>
-</section>
-<section id="slide-org64dd42a">
-<h3 id="org64dd42a">Principles</h3>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/28/Screen Shot 2018-06-28 at 8.44.05 PM.png">
+<section id="slide-org1465a88">
+<h2 id="org1465a88">At the first glance</h2>
+<div class="org-src-container">
 
+<pre  class="src src-javascript"><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
+
+  <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">A getter/setter for an open property.</span>
+  get open<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #F92672;">return</span> <span style="color: #FF80F4;">this</span>.hasAttribute<span style="color: #b0b1a3;">(</span><span style="color: #EEDC82;">'open'</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+
+  set open<span style="color: #93a8c6;">(</span>val<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">Reflect the value of the open property as an HTML attribute.</span>
+    <span style="color: #F92672;">if</span> <span style="color: #b0b1a3;">(</span>val<span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      <span style="color: #FF80F4;">this</span>.setAttribute<span style="color: #97b098;">(</span><span style="color: #EEDC82;">'open'</span>, <span style="color: #EEDC82;">''</span><span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span> <span style="color: #F92672;">else</span> <span style="color: #b0b1a3;">{</span>
+      <span style="color: #FF80F4;">this</span>.removeAttribute<span style="color: #97b098;">(</span><span style="color: #EEDC82;">'open'</span><span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+    <span style="color: #FF80F4;">this</span>.toggleDrawer<span style="color: #b0b1a3;">()</span>;
+  <span style="color: #93a8c6;">}</span>
+
+  <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">A getter/setter for a disabled property.</span>
+  get disabled<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #F92672;">return</span> <span style="color: #FF80F4;">this</span>.hasAttribute<span style="color: #b0b1a3;">(</span><span style="color: #EEDC82;">'disabled'</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+
+  set disabled<span style="color: #93a8c6;">(</span>val<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">Reflect the value of the disabled property as an HTML attribute.</span>
+    <span style="color: #F92672;">if</span> <span style="color: #b0b1a3;">(</span>val<span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      <span style="color: #FF80F4;">this</span>.setAttribute<span style="color: #97b098;">(</span><span style="color: #EEDC82;">'disabled'</span>, <span style="color: #EEDC82;">''</span><span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span> <span style="color: #F92672;">else</span> <span style="color: #b0b1a3;">{</span>
+      <span style="color: #FF80F4;">this</span>.removeAttribute<span style="color: #97b098;">(</span><span style="color: #EEDC82;">'disabled'</span><span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+
+  <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">Can define constructor arguments if you wish.</span>
+  constructor<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">If you define a constructor, always call super() first!</span>
+    <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">This is specific to CE and required by the spec.</span>
+    <span style="color: #F92672;">super</span><span style="color: #b0b1a3;">()</span>;
+
+    <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">Setup a click listener on &lt;app-drawer&gt; itself.</span>
+    <span style="color: #FF80F4;">this</span>.addEventListener<span style="color: #b0b1a3;">(</span><span style="color: #EEDC82;">'click'</span>, e =&gt; <span style="color: #97b098;">{</span>
+      <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">Don't toggle the drawer if it's disabled.</span>
+      <span style="color: #F92672;">if</span> <span style="color: #aebed8;">(</span><span style="color: #FF80F4;">this</span>.disabled<span style="color: #aebed8;">)</span> <span style="color: #aebed8;">{</span>
+        <span style="color: #F92672;">return</span>;
+      <span style="color: #aebed8;">}</span>
+      <span style="color: #FF80F4;">this</span>.toggleDrawer<span style="color: #aebed8;">()</span>;
+    <span style="color: #97b098;">}</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+
+  toggleDrawer<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    ...
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+
+customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #EEDC82;">'app-drawer'</span>, AppDrawer<span style="color: #8c8c8c;">)</span>;
+</pre>
+</div>
+</section>
+<section id="slide-orgcdcf020">
+<h3 id="orgcdcf020">How to use</h3>
+<pre  class="example">
+&lt;app-drawer&gt;
+&lt;h1&gt;This is Children&lt;/h1&gt;
+&lt;/app-drawer&gt;
+
+// children can read by JS this.children
+</pre>
+</section>
+<section id="slide-orgdcaa6b8">
+<h3 id="orgdcaa6b8">Lifecycle</h3>
+<ul>
+<li>constructor // addEventListener, create shadowDOM</li>
+<li>connectedCallback // ajax call</li>
+<li>disconnectedCallback // cleanup listener</li>
+<li>attributeChangedCallback(attrName, oldVal, newVal) // watch attr in static observedAttributes</li>
+<li>adoptedCallback</li>
+
+</ul>
+</section>
+<section id="slide-org96fde64">
+<h3 id="org96fde64">CSS/Shadow DOM</h3>
+<div class="org-src-container">
+
+<pre  class="src src-html">&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
+  &lt;<span style="color: #A6E22E;">style</span>&gt;
+    p { color: green; }
+  &lt;/<span style="color: #A6E22E;">style</span>&gt;
+  &lt;<span style="color: #A6E22E;">p</span>&gt;I'm in Shadow DOM. My markup was stamped from a &lt;<span style="color: #A6E22E;">template</span>&gt;.&lt;/<span style="color: #A6E22E;">p</span>&gt;
+&lt;/<span style="color: #A6E22E;">template</span>&gt;
+
+&lt;<span style="color: #A6E22E;">script</span>&gt;
+  let tmpl = document.querySelector('#x-foo-from-template');
+
+  customElements.define('x-foo-from-template', class extends HTMLElement {
+    constructor() {
+      super(); // always call super() first in the constructor.
+      let shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(tmpl.content.cloneNode(true));
+    }
+    ...
+  });
+&lt;/<span style="color: #A6E22E;">script</span>&gt;
+</pre>
+</div>
 </section>
 </section>
 <section>
-<section id="slide-org0e294b3">
-<h2 id="org0e294b3">Fast</h2>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.52.50 PM.png">
+<section id="slide-org969dbf2">
+<h2 id="org969dbf2">Current state of web components</h2>
+<div class="outline-text-2" id="text-org969dbf2">
+</div>
 </section>
-<section id="slide-org2283a0a">
-<h3 id="org2283a0a">Why Fast</h3>
-<blockquote>No matter what kind of experience I'm building, I want it to be fast</blockquote>
-</section>
-<section id="slide-org4dd83bb">
-<h3 id="org4dd83bb">Why Fast</h3>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/30/EVF0FPcx.gif">
-</section>
-<section id="slide-orgdd9e116">
-<h3 id="orgdd9e116">How to Fast</h3>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.53.07 PM.png">
-</section>
-<section id="slide-org07dd880">
-<h3 id="org07dd880">How to Fast</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Mv-l3-tJgGk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-<section id="slide-org1e14193">
-<h3 id="org1e14193">How to Fast</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/UvK9zAsSM8Q?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-<section id="slide-org43d4083">
-<h3 id="org43d4083">How to Fast</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/7_2CJs_VZk4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org0547d09">
-<h2 id="org0547d09">Integrated</h2>
-<img class="stretch" src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.56.03 PM.png">
-</section>
-<section id="slide-orgd02b00d">
-<h3 id="orgd02b00d">Credential Management API</h3>
-<video src="https://developers.google.com/web/fundamentals/security/credential-management/animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay="" muted="" loop="" controls=""></video>
-</section>
-<section id="slide-orgabf5206">
-<h3 id="orgabf5206">What's new with sign up and sign in on the web</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/kGGMgEfSzMw?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-<section id="slide-org8c4375f">
-<h3 id="org8c4375f">Add to home screen API</h3>
-<img src="https://image.liyaodong.com/2018/6/30/1530329685971.jpg">
-</section>
-<section id="slide-orgd69f542">
-<h3 id="orgd69f542">Add to home screen API</h3>
-<img src="https://developers.google.com/web/fundamentals/app-install-banners/images/add-to-home-screen.gif">
-</section>
-<section id="slide-orgdc4b048">
-<h3 id="orgdc4b048">Add to home screen API</h3>
-<img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.58.06 PM.png">
-</section>
-<section id="slide-org807ca77">
-<h3 id="org807ca77">Web APK: Trusted Web Activities</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/TCgT8dzSiU8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org6eb7bb0">
-<h2 id="org6eb7bb0">Reliable</h2>
-<img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 9.02.49 PM.png">
-</section>
-<section id="slide-org895369d">
-<h3 id="org895369d">Service Worker</h3>
-<img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 8.45.41 PM.png">
-</section>
-<section id="slide-orgd963844">
-<h3 id="orgd963844">Offline support</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/DtuJ55tmjps" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-orge4abef1">
-<h2 id="orge4abef1">Engaging</h2>
-<img src="https://image.liyaodong.com/2018/6/30/Screen Shot 2018-06-28 at 9.05.00 PM.png">
-</section>
-<section id="slide-orga306cbe">
-<h3 id="orga306cbe">User experience</h3>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/3VUMl_l-_fI?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-orgf196676">
-<h2 id="orgf196676">PWA for desktop</h2>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/EiGDj9wSfb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-<section id="slide-org53793c3">
-<h3 id="org53793c3">PWA Desktop VS Electron/Node-Webkit</h3>
-</section>
-</section>
-<section>
-<section id="slide-orgd28f765">
-<h2 id="orgd28f765">Chrome DevTools</h2>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/mfuE53x4b3k?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org8d55fdc">
-<h2 id="org8d55fdc">TensorFlow for JavaScript</h2>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/OmofOvMApTU?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org75957ca">
-<h2 id="org75957ca">Headless Chrome</h2>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/lhZOFUY1weo?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org7df5be4">
-<h2 id="org7df5be4">WebAssembly</h2>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/BnYq7JapeDA?list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
-</section>
-<section>
-<section id="slide-org5c3a049">
-<h2 id="org5c3a049">Summary</h2>
+<section id="slide-orga807fed">
+<h3 id="orga807fed">who are using web components?</h3>
 <p>
-PWA/Service Worker/WebAssembly/Lighthouse/AMP
+Everyone
 </p>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Ay-mdLMDtbs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<ul>
+<li>Youtube</li>
+<li>Github</li>
+<li>Google News(All AMP websites)</li>
+<li>salesforce</li>
+
+</ul>
+</section>
+<section id="slide-org42e6ac4">
+<h3 id="org42e6ac4">Custom Elements</h3>
+<img class="stretch" src="./custom-element.jpg">
+</section>
+<section id="slide-org88f0fb8">
+<h3 id="org88f0fb8">Web Components in Google</h3>
+<img class="stretch" src="webcomponents-in-google.jpg">
 </section>
 </section>
 <section>
-<section id="slide-org133132f">
-<h2 id="org133132f">Q&amp;A</h2>
+<section id="slide-orge7e2c9e">
+<h2 id="orge7e2c9e">What's driving adoption</h2>
+<div class="outline-text-2" id="text-orge7e2c9e">
+</div>
+</section>
+<section id="slide-orgf92deef">
+<h3 id="orgf92deef">Framework VS Standard 2014</h3>
+<img class="stretch" src="https://d259t2jj6zp7qm.cloudfront.net/images/c_scale%2Cw_800-webstack_2014_plain_kovxlr.png">
+</section>
+<section id="slide-orgc488e0e">
+<h3 id="orgc488e0e">Framework VS Standard 2019</h3>
+<img class="stretch" src="https://d12fd6m9xo0jeo.cloudfront.net/f30e3522-04e3-4893-870d-d9d0c1935430.png">
+</section>
+<section id="slide-org562cc85">
+<h3 id="org562cc85">Framework VS Standard</h3>
+<ul>
+<li>Performance(implatement in framework by JS vs implatement by native browser)</li>
+<li>Tooling ecosystem(framework based devtool vs browser devtool)</li>
+<li>No Breaking changes</li>
+<li>Being stuck with old technology(evolution)</li>
+<li>Being stuck inside a walled garden(protability)</li>
+<li>Interoperability(Across framework)</li>
+
+</ul>
+</section>
+<section id="slide-org880f9d1">
+<h3 id="org880f9d1">Saleforce Lightning Web Components</h3>
+<a href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html" target="_blank">Introducing lightning web components</a>
+<img class="stretch" src="./lwc.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orgc4e23f1">
-<h2 id="orgc4e23f1">Thanks</h2>
+<section id="slide-orga094e65">
+<h2 id="orga094e65">How to get started</h2>
+</section>
+</section>
+<section>
+<section id="slide-org6dedc49">
+<h2 id="org6dedc49">Summary</h2>
+</section>
+</section>
+<section>
+<section id="slide-org8ed606d">
+<h2 id="org8ed606d">Q&amp;A</h2>
+</section>
+</section>
+<section>
+<section id="slide-org7187c2a">
+<h2 id="org7187c2a">Thanks</h2>
 </section>
 </section>
 </div>
@@ -213,7 +246,7 @@ Reveal.initialize({
 
 controls: true,
 progress: true,
-history: false,
+history: true,
 center: true,
 slideNumber: 'c',
 rollingLinks: false,
