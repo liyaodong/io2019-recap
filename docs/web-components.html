@@ -28,15 +28,15 @@
 <div class="slides">
 
 <section>
-<section id="slide-org136a78b" data-background="#ffffff">
-<h2 id="org136a78b">Web Components</h2>
+<section id="slide-org4e7c415" data-background="#ffffff">
+<h2 id="org4e7c415">Web Components</h2>
 <p>
 The Secret Ingredient Helping Power The Web
 </p>
 <img class="stretch" src="./hashtag.gif">
 </section>
-<section id="slide-org97d85e8">
-<h3 id="org97d85e8">Outline</h3>
+<section id="slide-org7c2d782">
+<h3 id="org7c2d782">Outline</h3>
 <ul>
 <li>Current state of web components</li>
 <li>What's driving adoption(pros-cons compare)</li>
@@ -46,8 +46,8 @@ The Secret Ingredient Helping Power The Web
 </section>
 </section>
 <section>
-<section id="slide-org1465a88">
-<h2 id="org1465a88">At the first glance</h2>
+<section id="slide-org56ef533">
+<h2 id="org56ef533">At the first glance</h2>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
@@ -106,8 +106,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </pre>
 </div>
 </section>
-<section id="slide-orgcdcf020">
-<h3 id="orgcdcf020">How to use</h3>
+<section id="slide-org7201a1a">
+<h3 id="org7201a1a">How to use</h3>
 <pre  class="example">
 &lt;app-drawer&gt;
 &lt;h1&gt;This is Children&lt;/h1&gt;
@@ -116,8 +116,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 // children can read by JS this.children
 </pre>
 </section>
-<section id="slide-orgdcaa6b8">
-<h3 id="orgdcaa6b8">Lifecycle</h3>
+<section id="slide-org0e964ed">
+<h3 id="org0e964ed">Lifecycle</h3>
 <ul>
 <li>constructor // addEventListener, create shadowDOM</li>
 <li>connectedCallback // ajax call</li>
@@ -127,8 +127,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 
 </ul>
 </section>
-<section id="slide-org96fde64">
-<h3 id="org96fde64">CSS/Shadow DOM</h3>
+<section id="slide-org8a95c8c">
+<h3 id="org8a95c8c">CSS/Shadow DOM</h3>
 <div class="org-src-container">
 
 <pre  class="src src-html">&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
@@ -155,13 +155,13 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </section>
 </section>
 <section>
-<section id="slide-org969dbf2">
-<h2 id="org969dbf2">Current state of web components</h2>
-<div class="outline-text-2" id="text-org969dbf2">
+<section id="slide-org0485f33">
+<h2 id="org0485f33">Current state of web components</h2>
+<div class="outline-text-2" id="text-org0485f33">
 </div>
 </section>
-<section id="slide-orga807fed">
-<h3 id="orga807fed">who are using web components?</h3>
+<section id="slide-org8d2ff86">
+<h3 id="org8d2ff86">who are using web components?</h3>
 <p>
 Everyone
 </p>
@@ -173,31 +173,31 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org42e6ac4">
-<h3 id="org42e6ac4">Custom Elements</h3>
+<section id="slide-org7117b5e">
+<h3 id="org7117b5e">Custom Elements</h3>
 <img class="stretch" src="./custom-element.jpg">
 </section>
-<section id="slide-org88f0fb8">
-<h3 id="org88f0fb8">Web Components in Google</h3>
+<section id="slide-org15085ca">
+<h3 id="org15085ca">Web Components in Google</h3>
 <img class="stretch" src="webcomponents-in-google.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orge7e2c9e">
-<h2 id="orge7e2c9e">What's driving adoption</h2>
-<div class="outline-text-2" id="text-orge7e2c9e">
+<section id="slide-orgf1e33c9">
+<h2 id="orgf1e33c9">What's driving adoption</h2>
+<div class="outline-text-2" id="text-orgf1e33c9">
 </div>
 </section>
-<section id="slide-orgf92deef">
-<h3 id="orgf92deef">Framework VS Standard 2014</h3>
+<section id="slide-org651eb60">
+<h3 id="org651eb60">Framework VS Standard 2014</h3>
 <img class="stretch" src="https://d259t2jj6zp7qm.cloudfront.net/images/c_scale%2Cw_800-webstack_2014_plain_kovxlr.png">
 </section>
-<section id="slide-orgc488e0e">
-<h3 id="orgc488e0e">Framework VS Standard 2019</h3>
+<section id="slide-org9cf9886">
+<h3 id="org9cf9886">Framework VS Standard 2019</h3>
 <img class="stretch" src="https://d12fd6m9xo0jeo.cloudfront.net/f30e3522-04e3-4893-870d-d9d0c1935430.png">
 </section>
-<section id="slide-org562cc85">
-<h3 id="org562cc85">Framework VS Standard</h3>
+<section id="slide-org03dd043">
+<h3 id="org03dd043">Framework VS Standard</h3>
 <ul>
 <li>Performance(implatement in framework by JS vs implatement by native browser)</li>
 <li>Tooling ecosystem(framework based devtool vs browser devtool)</li>
@@ -208,30 +208,34 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org880f9d1">
-<h3 id="org880f9d1">Saleforce Lightning Web Components</h3>
+<section id="slide-org140d07f">
+<h3 id="org140d07f">Saleforce Lightning Web Components</h3>
 <a href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html" target="_blank">Introducing lightning web components</a>
 <img class="stretch" src="./lwc.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orga094e65">
-<h2 id="orga094e65">How to get started</h2>
+<section id="slide-org5a26555">
+<h2 id="org5a26555">How to get started</h2>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/web-components/">Google Developers</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN</a></li>
+<li><a href="https://open-wc.org/guide/#quickstart">open-wc</a></li>
+<li><a href="https://lit-html.polymer-project.org/">Polymer/lit-html</a></li>
+<li><a href="https://ionicframework.com/docs/">ionic-webcomponents</a></li>
+<li><a href="https://wiredjs.com/showcase.html">wiredjs</a></li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-org6dedc49">
-<h2 id="org6dedc49">Summary</h2>
+<section id="slide-org7a8901d">
+<h2 id="org7a8901d">Q&amp;A</h2>
 </section>
 </section>
 <section>
-<section id="slide-org8ed606d">
-<h2 id="org8ed606d">Q&amp;A</h2>
-</section>
-</section>
-<section>
-<section id="slide-org7187c2a">
-<h2 id="org7187c2a">Thanks</h2>
+<section id="slide-org96a9a7c">
+<h2 id="org96a9a7c">Thanks</h2>
 </section>
 </section>
 </div>
