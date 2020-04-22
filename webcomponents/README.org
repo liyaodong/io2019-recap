@@ -79,12 +79,14 @@ class AppDrawer extends HTMLElement {
 customElements.define('app-drawer', AppDrawer);
 #+END_SRC
 ** How to use
-#+BEGIN_SRC
+#+BEGIN_SRC html
 <app-drawer>
 <h1>This is Children</h1>
 </app-drawer>
-
 // children can read by JS this.children
+
+// is attribute way to consume expanding-list
+<ul is="expanding-list"></ul>
 #+END_SRC
 ** Lifecycle
 - constructor // addEventListener, create shadowDOM
@@ -114,6 +116,10 @@ customElements.define('app-drawer', AppDrawer);
   });
 </script>
 #+END_SRC
+** Import a web components
+   #+begin_src html
+   <link rel="import" href="components/d-header.html">
+   #+end_src
 * Current state of web components
 ** who are using web components?
    Everyone

@@ -28,15 +28,15 @@
 <div class="slides">
 
 <section>
-<section id="slide-orgb1be443" data-background="#ffffff">
-<h2 id="orgb1be443">Web Components</h2>
+<section id="slide-org8ad94b3" data-background="#ffffff">
+<h2 id="org8ad94b3">Web Components</h2>
 <p>
 The Secret Ingredient Helping Power The Web
 </p>
 <img class="stretch" src="./hashtag.gif">
 </section>
-<section id="slide-orged8a8aa">
-<h3 id="orged8a8aa">Outline</h3>
+<section id="slide-org2c37f1e">
+<h3 id="org2c37f1e">Outline</h3>
 <ul>
 <li>Current state of web components</li>
 <li>What's driving adoption(pros-cons compare)</li>
@@ -46,8 +46,8 @@ The Secret Ingredient Helping Power The Web
 </section>
 </section>
 <section>
-<section id="slide-orgbfca83c">
-<h2 id="orgbfca83c">At the first glance</h2>
+<section id="slide-org5351dfc">
+<h2 id="org5351dfc">At the first glance</h2>
 <ul>
 <li>Custom Elements</li>
 <li>Shadow DOM</li>
@@ -55,8 +55,8 @@ The Secret Ingredient Helping Power The Web
 
 </ul>
 </section>
-<section id="slide-org3d751d6">
-<h3 id="org3d751d6">Example</h3>
+<section id="slide-orgc2dcb18">
+<h3 id="orgc2dcb18">Example</h3>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><code trim><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
@@ -115,18 +115,22 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </code></pre>
 </div>
 </section>
-<section id="slide-org38eda7a">
-<h3 id="org38eda7a">How to use</h3>
-<pre  class="example">
-&lt;app-drawer&gt;
-&lt;h1&gt;This is Children&lt;/h1&gt;
-&lt;/app-drawer&gt;
+<section id="slide-org90cdd93">
+<h3 id="org90cdd93">How to use</h3>
+<div class="org-src-container">
 
+<pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">app-drawer</span>&gt;
+&lt;<span style="color: #A6E22E;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">This is Children</span>&lt;/<span style="color: #A6E22E;">h1</span>&gt;
+&lt;/<span style="color: #A6E22E;">app-drawer</span>&gt;
 // children can read by JS this.children
-</pre>
+
+// is attribute way to consume expanding-list
+&lt;<span style="color: #A6E22E;">ul</span> <span style="color: #FD971F;">is</span>=<span style="color: #EEDC82;">"expanding-list"</span>&gt;&lt;/<span style="color: #A6E22E;">ul</span>&gt;
+</code></pre>
+</div>
 </section>
-<section id="slide-org464a0dc">
-<h3 id="org464a0dc">Lifecycle</h3>
+<section id="slide-org380ded3">
+<h3 id="org380ded3">Lifecycle</h3>
 <ul>
 <li>constructor // addEventListener, create shadowDOM</li>
 <li>connectedCallback // ajax call</li>
@@ -136,8 +140,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 
 </ul>
 </section>
-<section id="slide-org1fd8a08">
-<h3 id="org1fd8a08">CSS/Shadow DOM</h3>
+<section id="slide-org43aa554">
+<h3 id="org43aa554">CSS/Shadow DOM</h3>
 <div class="org-src-container">
 
 <pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
@@ -162,15 +166,23 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </code></pre>
 </div>
 </section>
-</section>
-<section>
-<section id="slide-orgf147fdf">
-<h2 id="orgf147fdf">Current state of web components</h2>
-<div class="outline-text-2" id="text-orgf147fdf">
+<section id="slide-orgaef4891">
+<h3 id="orgaef4891">Import a web components</h3>
+<div class="org-src-container">
+
+<pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">link</span> <span style="color: #FD971F;">rel</span>=<span style="color: #EEDC82;">"import"</span> <span style="color: #FD971F;">href</span>=<span style="color: #EEDC82;">"components/d-header.html"</span>&gt;
+</code></pre>
 </div>
 </section>
-<section id="slide-org00e7ca2">
-<h3 id="org00e7ca2">who are using web components?</h3>
+</section>
+<section>
+<section id="slide-org9444d85">
+<h2 id="org9444d85">Current state of web components</h2>
+<div class="outline-text-2" id="text-org9444d85">
+</div>
+</section>
+<section id="slide-orge6edd69">
+<h3 id="orge6edd69">who are using web components?</h3>
 <p>
 Everyone
 </p>
@@ -182,31 +194,31 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org8817655">
-<h3 id="org8817655">Custom Elements</h3>
+<section id="slide-org3f3d0b9">
+<h3 id="org3f3d0b9">Custom Elements</h3>
 <img class="stretch" src="./custom-element.jpg">
 </section>
-<section id="slide-org3ee3ca9">
-<h3 id="org3ee3ca9">Web Components in Google</h3>
+<section id="slide-orgf4f0643">
+<h3 id="orgf4f0643">Web Components in Google</h3>
 <img class="stretch" src="webcomponents-in-google.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orgfc48471">
-<h2 id="orgfc48471">What's driving adoption</h2>
-<div class="outline-text-2" id="text-orgfc48471">
+<section id="slide-orgcbe53cc">
+<h2 id="orgcbe53cc">What's driving adoption</h2>
+<div class="outline-text-2" id="text-orgcbe53cc">
 </div>
 </section>
-<section id="slide-orgd29e0fc">
-<h3 id="orgd29e0fc">Framework VS Standard 2014</h3>
+<section id="slide-orgb772bdf">
+<h3 id="orgb772bdf">Framework VS Standard 2014</h3>
 <img class="stretch" src="https://d259t2jj6zp7qm.cloudfront.net/images/c_scale%2Cw_800-webstack_2014_plain_kovxlr.png">
 </section>
-<section id="slide-org8885d36">
-<h3 id="org8885d36">Framework VS Standard 2019</h3>
+<section id="slide-org3213e69">
+<h3 id="org3213e69">Framework VS Standard 2019</h3>
 <img class="stretch" src="https://d12fd6m9xo0jeo.cloudfront.net/f30e3522-04e3-4893-870d-d9d0c1935430.png">
 </section>
-<section id="slide-org66b3620">
-<h3 id="org66b3620">Framework VS Standard</h3>
+<section id="slide-org7097ae0">
+<h3 id="org7097ae0">Framework VS Standard</h3>
 <ul>
 <li>Performance(implatement in framework by JS vs implatement by native browser)</li>
 <li>Tooling ecosystem(framework based devtool vs browser devtool)</li>
@@ -217,15 +229,15 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org684d553">
-<h3 id="org684d553">Saleforce Lightning Web Components</h3>
+<section id="slide-org4d4d7fa">
+<h3 id="org4d4d7fa">Saleforce Lightning Web Components</h3>
 <a href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html" target="_blank">Introducing lightning web components</a>
 <img class="stretch" src="./lwc.jpg">
 </section>
 </section>
 <section>
-<section id="slide-org57ecbc6">
-<h2 id="org57ecbc6">How to get started</h2>
+<section id="slide-org5433cff">
+<h2 id="org5433cff">How to get started</h2>
 <ul>
 <li><a href="https://developers.google.com/web/fundamentals/web-components/">Google Developers</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN</a></li>
@@ -238,13 +250,13 @@ Everyone
 </section>
 </section>
 <section>
-<section id="slide-org49c9aa4">
-<h2 id="org49c9aa4">Q&amp;A</h2>
+<section id="slide-orgb976d4a">
+<h2 id="orgb976d4a">Q&amp;A</h2>
 </section>
 </section>
 <section>
-<section id="slide-org676160b">
-<h2 id="org676160b">Thanks</h2>
+<section id="slide-org83282f4">
+<h2 id="org83282f4">Thanks</h2>
 </section>
 </section>
 </div>
