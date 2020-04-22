@@ -6,9 +6,9 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/moon.css" id="theme"/>
 
 <link rel="stylesheet" href="./google_io.css"/>
 
@@ -18,7 +18,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -28,15 +28,15 @@
 <div class="slides">
 
 <section>
-<section id="slide-org4e7c415" data-background="#ffffff">
-<h2 id="org4e7c415">Web Components</h2>
+<section id="slide-orgb1be443" data-background="#ffffff">
+<h2 id="orgb1be443">Web Components</h2>
 <p>
 The Secret Ingredient Helping Power The Web
 </p>
 <img class="stretch" src="./hashtag.gif">
 </section>
-<section id="slide-org7c2d782">
-<h3 id="org7c2d782">Outline</h3>
+<section id="slide-orged8a8aa">
+<h3 id="orged8a8aa">Outline</h3>
 <ul>
 <li>Current state of web components</li>
 <li>What's driving adoption(pros-cons compare)</li>
@@ -46,11 +46,20 @@ The Secret Ingredient Helping Power The Web
 </section>
 </section>
 <section>
-<section id="slide-org56ef533">
-<h2 id="org56ef533">At the first glance</h2>
+<section id="slide-orgbfca83c">
+<h2 id="orgbfca83c">At the first glance</h2>
+<ul>
+<li>Custom Elements</li>
+<li>Shadow DOM</li>
+<li>HTML Templates</li>
+
+</ul>
+</section>
+<section id="slide-org3d751d6">
+<h3 id="org3d751d6">Example</h3>
 <div class="org-src-container">
 
-<pre  class="src src-javascript"><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
+<pre  class="src src-javascript"><code trim><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
 
   <span style="color: #8C8C8C;">// </span><span style="color: #8C8C8C;">A getter/setter for an open property.</span>
   get open<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
@@ -103,11 +112,11 @@ The Secret Ingredient Helping Power The Web
 <span style="color: #8c8c8c;">}</span>
 
 customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #EEDC82;">'app-drawer'</span>, AppDrawer<span style="color: #8c8c8c;">)</span>;
-</pre>
+</code></pre>
 </div>
 </section>
-<section id="slide-org7201a1a">
-<h3 id="org7201a1a">How to use</h3>
+<section id="slide-org38eda7a">
+<h3 id="org38eda7a">How to use</h3>
 <pre  class="example">
 &lt;app-drawer&gt;
 &lt;h1&gt;This is Children&lt;/h1&gt;
@@ -116,8 +125,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 // children can read by JS this.children
 </pre>
 </section>
-<section id="slide-org0e964ed">
-<h3 id="org0e964ed">Lifecycle</h3>
+<section id="slide-org464a0dc">
+<h3 id="org464a0dc">Lifecycle</h3>
 <ul>
 <li>constructor // addEventListener, create shadowDOM</li>
 <li>connectedCallback // ajax call</li>
@@ -127,11 +136,11 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 
 </ul>
 </section>
-<section id="slide-org8a95c8c">
-<h3 id="org8a95c8c">CSS/Shadow DOM</h3>
+<section id="slide-org1fd8a08">
+<h3 id="org1fd8a08">CSS/Shadow DOM</h3>
 <div class="org-src-container">
 
-<pre  class="src src-html">&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
+<pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
   &lt;<span style="color: #A6E22E;">style</span>&gt;
     p { color: green; }
   &lt;/<span style="color: #A6E22E;">style</span>&gt;
@@ -150,18 +159,18 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
     ...
   });
 &lt;/<span style="color: #A6E22E;">script</span>&gt;
-</pre>
+</code></pre>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org0485f33">
-<h2 id="org0485f33">Current state of web components</h2>
-<div class="outline-text-2" id="text-org0485f33">
+<section id="slide-orgf147fdf">
+<h2 id="orgf147fdf">Current state of web components</h2>
+<div class="outline-text-2" id="text-orgf147fdf">
 </div>
 </section>
-<section id="slide-org8d2ff86">
-<h3 id="org8d2ff86">who are using web components?</h3>
+<section id="slide-org00e7ca2">
+<h3 id="org00e7ca2">who are using web components?</h3>
 <p>
 Everyone
 </p>
@@ -173,31 +182,31 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org7117b5e">
-<h3 id="org7117b5e">Custom Elements</h3>
+<section id="slide-org8817655">
+<h3 id="org8817655">Custom Elements</h3>
 <img class="stretch" src="./custom-element.jpg">
 </section>
-<section id="slide-org15085ca">
-<h3 id="org15085ca">Web Components in Google</h3>
+<section id="slide-org3ee3ca9">
+<h3 id="org3ee3ca9">Web Components in Google</h3>
 <img class="stretch" src="webcomponents-in-google.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orgf1e33c9">
-<h2 id="orgf1e33c9">What's driving adoption</h2>
-<div class="outline-text-2" id="text-orgf1e33c9">
+<section id="slide-orgfc48471">
+<h2 id="orgfc48471">What's driving adoption</h2>
+<div class="outline-text-2" id="text-orgfc48471">
 </div>
 </section>
-<section id="slide-org651eb60">
-<h3 id="org651eb60">Framework VS Standard 2014</h3>
+<section id="slide-orgd29e0fc">
+<h3 id="orgd29e0fc">Framework VS Standard 2014</h3>
 <img class="stretch" src="https://d259t2jj6zp7qm.cloudfront.net/images/c_scale%2Cw_800-webstack_2014_plain_kovxlr.png">
 </section>
-<section id="slide-org9cf9886">
-<h3 id="org9cf9886">Framework VS Standard 2019</h3>
+<section id="slide-org8885d36">
+<h3 id="org8885d36">Framework VS Standard 2019</h3>
 <img class="stretch" src="https://d12fd6m9xo0jeo.cloudfront.net/f30e3522-04e3-4893-870d-d9d0c1935430.png">
 </section>
-<section id="slide-org03dd043">
-<h3 id="org03dd043">Framework VS Standard</h3>
+<section id="slide-org66b3620">
+<h3 id="org66b3620">Framework VS Standard</h3>
 <ul>
 <li>Performance(implatement in framework by JS vs implatement by native browser)</li>
 <li>Tooling ecosystem(framework based devtool vs browser devtool)</li>
@@ -208,15 +217,15 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org140d07f">
-<h3 id="org140d07f">Saleforce Lightning Web Components</h3>
+<section id="slide-org684d553">
+<h3 id="org684d553">Saleforce Lightning Web Components</h3>
 <a href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html" target="_blank">Introducing lightning web components</a>
 <img class="stretch" src="./lwc.jpg">
 </section>
 </section>
 <section>
-<section id="slide-org5a26555">
-<h2 id="org5a26555">How to get started</h2>
+<section id="slide-org57ecbc6">
+<h2 id="org57ecbc6">How to get started</h2>
 <ul>
 <li><a href="https://developers.google.com/web/fundamentals/web-components/">Google Developers</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN</a></li>
@@ -229,37 +238,23 @@ Everyone
 </section>
 </section>
 <section>
-<section id="slide-org7a8901d">
-<h2 id="org7a8901d">Q&amp;A</h2>
+<section id="slide-org49c9aa4">
+<h2 id="org49c9aa4">Q&amp;A</h2>
 </section>
 </section>
 <section>
-<section id="slide-org96a9a7c">
-<h2 id="org96a9a7c">Thanks</h2>
+<section id="slide-org676160b">
+<h2 id="org676160b">Thanks</h2>
 </section>
 </section>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
-<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-
-controls: true,
-progress: true,
-history: true,
-center: true,
-slideNumber: 'c',
-rollingLinks: false,
-keyboard: true,
-overview: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
-transitionSpeed: 'default',
 multiplex: {
     secret: '', // null if client
     id: '', // id, obtained from socket.io server
@@ -268,11 +263,11 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>

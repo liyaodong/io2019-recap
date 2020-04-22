@@ -1,4 +1,4 @@
-#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+TITLE: Google I/O Redux 2019
 #+Email: mail@liyaodong.com
 #+Date:
@@ -19,6 +19,10 @@
    - What's driving adoption(pros-cons compare)
    - How to get started
 * At the first glance
+  - Custom Elements
+  - Shadow DOM
+  - HTML Templates
+** Example
 #+BEGIN_SRC javascript
 class AppDrawer extends HTMLElement {
 
