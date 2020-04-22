@@ -116,6 +116,8 @@ customElements.define('app-drawer', AppDrawer);
   });
 </script>
 #+END_SRC
+** Shadow DOM
+  #+REVEAL_HTML: <img class="stretch" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png">
 ** Import a web components
    #+begin_src html
    <link rel="import" href="components/d-header.html">
