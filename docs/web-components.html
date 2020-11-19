@@ -6,9 +6,9 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/reveal.css"/>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/theme/moon.css" id="theme"/>
 
 <link rel="stylesheet" href="./google_io.css"/>
 
@@ -18,7 +18,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -28,15 +28,15 @@
 <div class="slides">
 
 <section>
-<section id="slide-orgf92f832" data-background="#ffffff">
-<h2 id="orgf92f832">Web Components</h2>
+<section id="slide-orge94f007" data-background="#ffffff">
+<h2 id="orge94f007">Web Components</h2>
 <p>
 The Secret Ingredient Helping Power The Web
 </p>
 <img class="stretch" src="./hashtag.gif">
 </section>
-<section id="slide-org5baea42">
-<h3 id="org5baea42">Outline</h3>
+<section id="slide-org33e0f45">
+<h3 id="org33e0f45">Outline</h3>
 <ul>
 <li>Current state of web components</li>
 <li>What's driving adoption(pros-cons compare)</li>
@@ -46,8 +46,8 @@ The Secret Ingredient Helping Power The Web
 </section>
 </section>
 <section>
-<section id="slide-org7ff51e8">
-<h2 id="org7ff51e8">At the first glance</h2>
+<section id="slide-org8ca591b">
+<h2 id="org8ca591b">At the first glance</h2>
 <ul>
 <li>Custom Elements</li>
 <li>Shadow DOM</li>
@@ -55,8 +55,8 @@ The Secret Ingredient Helping Power The Web
 
 </ul>
 </section>
-<section id="slide-org625a822">
-<h3 id="org625a822">Example</h3>
+<section id="slide-org367f274">
+<h3 id="org367f274">Example</h3>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><code trim><span style="color: #F92672;">class</span> AppDrawer <span style="color: #F92672;">extends</span> HTMLElement <span style="color: #8c8c8c;">{</span>
@@ -115,8 +115,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </code></pre>
 </div>
 </section>
-<section id="slide-orgcf6a599">
-<h3 id="orgcf6a599">How to use</h3>
+<section id="slide-org623070d">
+<h3 id="org623070d">How to use</h3>
 <div class="org-src-container">
 
 <pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">app-drawer</span>&gt;
@@ -129,8 +129,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </code></pre>
 </div>
 </section>
-<section id="slide-org61eda20">
-<h3 id="org61eda20">Lifecycle</h3>
+<section id="slide-org6de8c04">
+<h3 id="org6de8c04">Lifecycle</h3>
 <ul>
 <li>constructor // addEventListener, create shadowDOM</li>
 <li>connectedCallback // ajax call</li>
@@ -140,8 +140,8 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 
 </ul>
 </section>
-<section id="slide-org4cbc80a">
-<h3 id="org4cbc80a">CSS/Shadow DOM</h3>
+<section id="slide-org4dc5a28">
+<h3 id="org4dc5a28">CSS/Shadow DOM</h3>
 <div class="org-src-container">
 
 <pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">template</span> <span style="color: #FD971F;">id</span>=<span style="color: #EEDC82;">"x-foo-from-template"</span>&gt;
@@ -166,12 +166,12 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </code></pre>
 </div>
 </section>
-<section id="slide-org25c2f12">
-<h3 id="org25c2f12">Shadow DOM</h3>
+<section id="slide-orgd50a138">
+<h3 id="orgd50a138">Shadow DOM</h3>
 <img class="stretch" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png">
 </section>
-<section id="slide-org8394a53">
-<h3 id="org8394a53">Import a web components</h3>
+<section id="slide-orgbc57198">
+<h3 id="orgbc57198">Import a web components</h3>
 <div class="org-src-container">
 
 <pre  class="src src-html"><code trim>&lt;<span style="color: #A6E22E;">link</span> <span style="color: #FD971F;">rel</span>=<span style="color: #EEDC82;">"import"</span> <span style="color: #FD971F;">href</span>=<span style="color: #EEDC82;">"components/d-header.html"</span>&gt;
@@ -180,13 +180,13 @@ customElements.define<span style="color: #8c8c8c;">(</span><span style="color: #
 </section>
 </section>
 <section>
-<section id="slide-org4083f95">
-<h2 id="org4083f95">Current state of web components</h2>
-<div class="outline-text-2" id="text-org4083f95">
+<section id="slide-org8ef7a68">
+<h2 id="org8ef7a68">Current state of web components</h2>
+<div class="outline-text-2" id="text-org8ef7a68">
 </div>
 </section>
-<section id="slide-orgff2c986">
-<h3 id="orgff2c986">who are using web components?</h3>
+<section id="slide-orga59281a">
+<h3 id="orga59281a">who are using web components?</h3>
 <p>
 Everyone
 </p>
@@ -198,31 +198,31 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org10781bf">
-<h3 id="org10781bf">Custom Elements</h3>
+<section id="slide-org7ac5968">
+<h3 id="org7ac5968">Custom Elements</h3>
 <img class="stretch" src="./custom-element.jpg">
 </section>
-<section id="slide-org650203c">
-<h3 id="org650203c">Web Components in Google</h3>
+<section id="slide-org6d3ef45">
+<h3 id="org6d3ef45">Web Components in Google</h3>
 <img class="stretch" src="webcomponents-in-google.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orgde29a3b">
-<h2 id="orgde29a3b">What's driving adoption</h2>
-<div class="outline-text-2" id="text-orgde29a3b">
+<section id="slide-org7804e8c">
+<h2 id="org7804e8c">What's driving adoption</h2>
+<div class="outline-text-2" id="text-org7804e8c">
 </div>
 </section>
-<section id="slide-org53a1bd9">
-<h3 id="org53a1bd9">Framework VS Standard 2014</h3>
+<section id="slide-org8301764">
+<h3 id="org8301764">Framework VS Standard 2014</h3>
 <img class="stretch" src="https://d259t2jj6zp7qm.cloudfront.net/images/c_scale%2Cw_800-webstack_2014_plain_kovxlr.png">
 </section>
-<section id="slide-org7bfb0f4">
-<h3 id="org7bfb0f4">Framework VS Standard 2019</h3>
+<section id="slide-orgfbe4551">
+<h3 id="orgfbe4551">Framework VS Standard 2019</h3>
 <img class="stretch" src="https://d12fd6m9xo0jeo.cloudfront.net/f30e3522-04e3-4893-870d-d9d0c1935430.png">
 </section>
-<section id="slide-org67ad4a4">
-<h3 id="org67ad4a4">Framework VS Standard</h3>
+<section id="slide-org800d064">
+<h3 id="org800d064">Framework VS Standard</h3>
 <ul>
 <li>Performance(implatement in framework by JS vs implatement by native browser)</li>
 <li>Tooling ecosystem(framework based devtool vs browser devtool)</li>
@@ -233,15 +233,15 @@ Everyone
 
 </ul>
 </section>
-<section id="slide-org4ace905">
-<h3 id="org4ace905">Saleforce Lightning Web Components</h3>
+<section id="slide-org81181ac">
+<h3 id="org81181ac">Saleforce Lightning Web Components</h3>
 <a href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html" target="_blank">Introducing lightning web components</a>
 <img class="stretch" src="./lwc.jpg">
 </section>
 </section>
 <section>
-<section id="slide-orgbc6d457">
-<h2 id="orgbc6d457">How to get started</h2>
+<section id="slide-org320f657">
+<h2 id="org320f657">How to get started</h2>
 <ul>
 <li><a href="https://developers.google.com/web/fundamentals/web-components/">Google Developers</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN</a></li>
@@ -254,18 +254,18 @@ Everyone
 </section>
 </section>
 <section>
-<section id="slide-orgce77166">
-<h2 id="orgce77166">Q&amp;A</h2>
+<section id="slide-org66971dc">
+<h2 id="org66971dc">Q&amp;A</h2>
 </section>
 </section>
 <section>
-<section id="slide-orgb24556e">
-<h2 id="orgb24556e">Thanks</h2>
+<section id="slide-org93a0074">
+<h2 id="org93a0074">Thanks</h2>
 </section>
 </section>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -279,11 +279,11 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>
